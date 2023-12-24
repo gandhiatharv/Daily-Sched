@@ -3,11 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pomodoro Daily Schedule</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Montserrat:wght@400&display=swap">
-
-
+    <title>Daily Sched</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -85,14 +81,16 @@
         }
 
         #achievement-summary {
-            width: 80%;
+            width: 870px;
             margin-top: 20px;
+            margin-left: 465%;
+            height:65px
         }
         .container {
   overflow: scroll;
 }
 .container {
-  min-height: 100000vh; /* or any other appropriate value */
+  min-height: 100vh; /* or any other appropriate value */
 }
 body {
     display: flex;
@@ -104,224 +102,400 @@ body {
     font-family: 'Montserrat', sans-serif;
     background-color: #f7f7f7;
 }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f7f7f7;
+            margin: 100px;
+            margin-left: 1000px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
 
+        .container {
+            width: 60%;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            margin-left: 1600px;
+
+        }
+
+        .column {
+            width: 50%; /* Adjust as needed */
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+  
+
+/* If you want a border under the heading */
+h1::after {
+  content: '';
+  display: block;
+  width: 160px; /* Adjust the width as needed */
+  height: 3px; /* Adjust the height as needed */
+  background-color: #4caf50; /* Border color */
+  margin: 10px auto; /* Adjust the margin as needed */
+}
+h4::after {
+  content: '';
+  display: block;
+  width: 50px; /* Adjust the width as needed */
+  height: 3px; /* Adjust the height as needed */
+  background-color: #4caf50; /* Border color */
+  margin: 10px auto; /* Adjust the margin as needed */
+}
+h1,h4 {
+  font-family: 'Montserrat', sans-serif; /* Choose a font you like */
+  color: #333; /* Text color */
+  text-align: center;
+  margin-bottom: 20px;
+  font-family:'Courier New', Courier, monospace; /* Choose a font you like */
+}
+h1{
+  padding-left: 480%;
+  
+}
+p{
+  font-family:Verdana, Geneva, Tahoma, sans-serif; /* Choose a font you like */
+}
+a{
+  margin-left:50px;
+}
+.roli {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            background-color: #f4f4f4;
+            padding: 10px;
+            margin: 10px;
+            width: 580%; /* Adjust the width as needed */
+            margin-left: 1800px;
+        }
+
+        .roli p {
+            max-width: 100%; /* Allow paragraphs to take full width */
+            margin: 5px; /* Remove default margin for paragraphs */
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
     </style>
 </head>
 <body>
-    <div id="schedule-container">
-        <h2>Pomodoro Daily Schedule</h2>
-
-        <!-- Repeat the following schedule rows throughout the entire day -->
-
-        <!-- Time, Activity, Goal, Notes Row 1 -->
-        <div class="schedule-row"><h4>Activity 1</h4>
-            <input type="text" class="time-input" value="12:00 AM - 12:25 AM" readonly>
-            <textarea class="activity-input" placeholder="Priority 1"></textarea>
+  <div class="roli">
+    <!-- Add your row content here -->
+    <p><a href="https://docs.google.com/spreadsheets/d/1MCz5SOvSrC6QT-o0gW5_Wet3LeLyxT_BLK_T-iVQCYQ/edit?usp=sharing" target="_blank" style="color: blue; text-decoration: underline;">Google Sheet Daily Schedule</a><br>
+      <a href="https://docs.google.com/document/d/1E6C8GUh8fM6JB3fiOSDgzNox7oiG6iUUM3Guuz2evAU/edit?usp=sharing" target="_blank" style="color: blue; text-decoration: underline;">Pomodoro Breaks</a><br>
+      <a href="https://docs.google.com/document/d/1WN4LOjXZlhCciW6H48cQCjfHRH24tEYe3edNjfS2_Iw/edit?usp=sharing" target="_blank" style="color: blue; text-decoration: underline;">Fallback System</a><br>
+      <a href="https://docs.google.com/document/d/1e1G_ZtDaB53Veje_Nc6fnVbF7Qlna8YvihNtYxPUxnQ/edit?usp=sharing" target="_blank" style="color: blue; text-decoration: underline;">Subjects to Learn</a><br>
+      <a href="https://docs.google.com/document/d/19ANDHr06WJha3KXZrI8_WoE51fCxFsNttkQES8gcliI/edit?usp=sharing" target="_blank" style="color: blue; text-decoration: underline;">Skills to Develop</a></p>
+      <a href="https://docs.google.com/document/d/19knZ73bIiccBPDCJ3dHjd0ZMKNRCNZufS_3rSN9Ue1E/edit?usp=sharing" target="_blank" style="color: blue; text-decoration: underline;">Atomic Habits List</a></p>
+      <a href="https://forms.gle/HUapBfU2Kq4wCebSA" target="_blank" style="color: blue; text-decoration: underline;">End of Day Reflection Form</a></p>
+      <p>Rules:
+        <br>a) On the spot, do goal setting and back against time limits for things to achieve, and beforehand have them done as well.
+        <br>b) Turn on and use pomodoro timer
+        <br>c) Activate and use the necessary/helpful extensions, like the ones to block sites
+        <br>d) Follow the 3:1 rule for shorter more spread out punishments, and bigger punishments for generally not following sched/necessary atomic habits etc on the form
+        <br>e) Giving myself 80% less time to do things rule (80/20 rule or Pareto Principle)
+        
+        <br></p>   <p>Reminders:
+          <br>a) Alternate priorities, and sandwiched between priorities, put sides. At least every other one should be a priority, if not more, and they can be repeated too.
+          <br>b) Fall back on unproductive system if not being productive
+          <br>c) Follow all Atomic Habits too on list, and following daily sched and doing all the start working subjects skills learning training developing activities
+          <br>d) Having preset and on the spot made daily schedules for good updated list of activities and things to be working on
+          <br>e) Dopamine detox if necessary, give punishments and rewards as a) motive to get things done better quicker faster and more sustainably too and b) make sure I'm still able to do hard, mentally stimulating work like by having to face boredom
+          <br></p>
+</div>
+  
+  
+    
+  <h1>Daily Sched</h1>
+  <div id="schedule-container">
+    <div class="container">
+        <div class="column">
+            <!-- Content for the first column -->
+            <div class="schedule-row"><h4>Activity 1</h4>
+              <input type="text" class="time-input" value="12:00 AM - 12:25 AM" 
+>
+              <textarea class="activity-input" placeholder="Priority/Side
+"></textarea>
+              <textarea class="goal-input" placeholder="Goal"></textarea>
+              <textarea class="notes-input" placeholder="Other Notes"></textarea>
+              <input type="checkbox" id="checkbox1">
+              <label for="checkbox1"></label>
+          </div><hr><br>
+          <div class="schedule-row"><h4>Activity 2</h4>
+            <input type="text" class="time-input" value="12:30 AM - 12:55 AM" 
+>
+            <textarea class="activity-input" placeholder="Priority/Side
+"></textarea>
             <textarea class="goal-input" placeholder="Goal"></textarea>
             <textarea class="notes-input" placeholder="Other Notes"></textarea>
-            <input type="checkbox" id="checkbox1">
-            <label for="checkbox1"></label>
+            <input type="checkbox" id="checkbox6">
+            <label for="checkbox6"></label>
         </div><hr><br>
-        <div class="schedule-row"><h4>Activity 2</h4>
-          <input type="text" class="time-input" value="12:30 AM - 12:55 AM" readonly>
-          <textarea class="activity-input" placeholder="Priority 1"></textarea>
+        <div class="schedule-row"><h4>Activity 3</h4>
+          <input type="text" class="time-input" value="1:00 AM - 1:25 AM" 
+>
+          <textarea class="activity-input" placeholder="Priority/Side
+"></textarea>
           <textarea class="goal-input" placeholder="Goal"></textarea>
           <textarea class="notes-input" placeholder="Other Notes"></textarea>
-          <input type="checkbox" id="checkbox6">
-          <label for="checkbox6"></label>
+          <input type="checkbox" id="checkbox7">
+          <label for="checkbox7"></label>
       </div><hr><br>
-      <div class="schedule-row"><h4>Activity 1</h4>
-        <input type="text" class="time-input" value="1:00 AM - 1:25 AM" readonly>
-        <textarea class="activity-input" placeholder="Priority 1"></textarea>
+      
+      <div class="schedule-row"><h4>Activity 4</h4>
+          <input type="text" class="time-input" value="1:30 AM - 1:55 AM" 
+>
+          <textarea class="activity-input" placeholder="Priority/Side
+"></textarea>
+          <textarea class="goal-input" placeholder="Goal"></textarea>
+          <textarea class="notes-input" placeholder="Other Notes"></textarea>
+          <input type="checkbox" id="checkbox8">
+          <label for="checkbox8"></label>
+      </div><hr><br>
+      <div class="schedule-row"><h4>Activity 5</h4>
+        <input type="text" class="time-input" value="2:10 AM - 2:35 AM" 
+>
+        <textarea class="activity-input" placeholder="Priority/Side
+"></textarea>
         <textarea class="goal-input" placeholder="Goal"></textarea>
         <textarea class="notes-input" placeholder="Other Notes"></textarea>
-        <input type="checkbox" id="checkbox7">
-        <label for="checkbox7"></label>
+        <input type="checkbox" id="checkbox9">
+        <label for="checkbox9"></label>
     </div><hr><br>
-    
-    <div class="schedule-row">
-        <input type="text" class="time-input" value="1:30 AM - 1:55 AM" readonly>
-        <textarea class="activity-input" placeholder="Priority 1"></textarea>
-        <textarea class="goal-input" placeholder="Goal"></textarea>
-        <textarea class="notes-input" placeholder="Other Notes"></textarea>
-        <input type="checkbox" id="checkbox8">
-        <label for="checkbox8"></label>
-    </div><hr><br>
-    <div class="schedule-row">
-      <input type="text" class="time-input" value="2:10 AM - 2:35 AM" readonly>
-      <textarea class="activity-input" placeholder="Priority 1"></textarea>
+    <div class="schedule-row"><h4>Activity 6</h4>
+      <input type="text" class="time-input" value="2:40 AM - 3:05 AM" 
+>
+      <textarea class="activity-input" placeholder="Priority/Side
+"></textarea>
       <textarea class="goal-input" placeholder="Goal"></textarea>
       <textarea class="notes-input" placeholder="Other Notes"></textarea>
-      <input type="checkbox" id="checkbox9">
-      <label for="checkbox9"></label>
+      <input type="checkbox" id="checkbox10">
+      <label for="checkbox10"></label>
   </div><hr><br>
-  <div class="schedule-row">
-    <input type="text" class="time-input" value="2:40 AM - 3:05 AM" readonly>
-    <textarea class="activity-input" placeholder="Priority 1"></textarea>
-    <textarea class="goal-input" placeholder="Goal"></textarea>
-    <textarea class="notes-input" placeholder="Other Notes"></textarea>
-    <input type="checkbox" id="checkbox10">
-    <label for="checkbox10"></label>
-</div><hr><br>
+  
+  <div class="schedule-row"><h4>Activity 7</h4>
+    <input type="text" class="time-input" value="3:10 AM - 3:35 AM" 
+>
+      <textarea class="activity-input" placeholder="Priority/Side
+"></textarea>
+      <textarea class="goal-input" placeholder="Goal"></textarea>
+      <textarea class="notes-input" placeholder="Other Notes"></textarea>
+      <input type="checkbox" id="checkbox11">
+      <label for="checkbox11"></label>
+  </div><hr><br>
+  
+  <div class="schedule-row"><h4>Activity 8</h4>
+    <input type="text" class="time-input" value="3:40 AM - 4:05 AM" 
+>
+      <textarea class="activity-input" placeholder="Priority/Side
+"></textarea>
+      <textarea class="goal-input" placeholder="Goal"></textarea>
+      <textarea class="notes-input" placeholder="Other Notes"></textarea>
+      <input type="checkbox" id="checkbox12">
+      <label for="checkbox12"></label>
+  </div><hr><br>
+  
+  <!-- Add 15-minute break -->
+  <div class="schedule-row"><h4>Activity 9</h4>
+    <input type="text" class="time-input" value="4:20 AM - 4:45 AM" 
+>
+      <textarea class="activity-input" placeholder="Priority/Side
+"></textarea>
+      <textarea class="goal-input" placeholder="Goal"></textarea>
+      <textarea class="notes-input" placeholder="Other Notes"></textarea>
+      <input type="checkbox" id="checkbox13">
+      <label for="checkbox13"></label>
+  </div><hr><br>
+  <!-- Continue the pattern for the rest of the day... -->
 
-<div class="schedule-row">
-    <input type="text" class="time-input" value="3:10 AM - 3:35 AM" readonly>
-    <textarea class="activity-input" placeholder="Priority 1"></textarea>
-    <textarea class="goal-input" placeholder="Goal"></textarea>
-    <textarea class="notes-input" placeholder="Other Notes"></textarea>
-    <input type="checkbox" id="checkbox11">
-    <label for="checkbox11"></label>
-</div><hr><br>
-
-<div class="schedule-row">
-    <input type="text" class="time-input" value="3:40 AM - 4:05 AM" readonly>
-    <textarea class="activity-input" placeholder="Priority 1"></textarea>
-    <textarea class="goal-input" placeholder="Goal"></textarea>
-    <textarea class="notes-input" placeholder="Other Notes"></textarea>
-    <input type="checkbox" id="checkbox12">
-    <label for="checkbox12"></label>
-</div><hr><br>
-
-<!-- Add 15-minute break -->
-<div class="schedule-row">
-    <input type="text" class="time-input" value="4:20 AM - 4:45 AM" readonly>
-    <textarea class="activity-input" placeholder="Priority 1"></textarea>
-    <textarea class="goal-input" placeholder="Goal"></textarea>
-    <textarea class="notes-input" placeholder="Other Notes"></textarea>
-    <input type="checkbox" id="checkbox13">
-    <label for="checkbox13"></label>
-</div><hr><br>
-<div class="schedule-row">
-  <input type="text" class="time-input" value="4:50 AM - 5:15 AM" readonly>
-  <textarea class="activity-input" placeholder="Priority 1"></textarea>
+  <div class="schedule-row"><h4>Activity 10</h4>
+    <input type="text" class="time-input" value="4:50 AM - 5:15 AM" 
+>
+  <textarea class="activity-input" placeholder="Priority/Side
+"></textarea>
   <textarea class="goal-input" placeholder="Goal"></textarea>
   <textarea class="notes-input" placeholder="Other Notes"></textarea>
   <input type="checkbox" id="checkbox14">
   <label for="checkbox14"></label>
 </div><hr><br>
 
-<div class="schedule-row">
-  <input type="text" class="time-input" value="5:20 AM - 5:45 AM" readonly>
-  <textarea class="activity-input" placeholder="Priority 1"></textarea>
+<div class="schedule-row"><h4>Activity 11</h4>
+  <input type="text" class="time-input" value="5:20 AM - 5:45 AM" 
+>
+  <textarea class="activity-input" placeholder="Priority/Side
+"></textarea>
   <textarea class="goal-input" placeholder="Goal"></textarea>
   <textarea class="notes-input" placeholder="Other Notes"></textarea>
   <input type="checkbox" id="checkbox15">
   <label for="checkbox15"></label>
 </div><hr><br>
 
-<div class="schedule-row">
-  <input type="text" class="time-input" value="6:00 AM - 6:25 AM" readonly>
-  <textarea class="activity-input" placeholder="Priority 1"></textarea>
+<div class="schedule-row"><h4>Activity 12</h4>
+  <input type="text" class="time-input" value="5:50 AM - 6:15 AM" 
+>
+  <textarea class="activity-input" placeholder="Priority/Side
+"></textarea>
   <textarea class="goal-input" placeholder="Goal"></textarea>
   <textarea class="notes-input" placeholder="Other Notes"></textarea>
   <input type="checkbox" id="checkbox16">
   <label for="checkbox16"></label>
 </div><hr><br>
 
-<!-- Add 15-minute break -->
-<div class="schedule-row">
-  <input type="text" class="time-input" value="6:40 AM - 7:05 AM" readonly>
-  <textarea class="activity-input" placeholder="Priority 1"></textarea>
+<!-- Add 5-minute break -->
+<div class="schedule-row"><h4>Activity 13</h4>
+  <input type="text" class="time-input" value="6:30 AM - 6:55 AM" 
+>
+  <textarea class="activity-input" placeholder="Priority/Side
+"></textarea>
   <textarea class="goal-input" placeholder="Goal"></textarea>
   <textarea class="notes-input" placeholder="Other Notes"></textarea>
   <input type="checkbox" id="checkbox17">
   <label for="checkbox17"></label>
 </div><hr><br>
-<div class="schedule-row">
-  <input type="text" class="time-input" value="7:10 AM - 7:35 AM" readonly>
-  <textarea class="activity-input" placeholder="Priority 1"></textarea>
+
+<div class="schedule-row"><h4>Activity 14</h4>
+  <input type="text" class="time-input" value="7:00 AM - 7:25 AM" 
+>
+  <textarea class="activity-input" placeholder="Priority/Side
+"></textarea>
   <textarea class="goal-input" placeholder="Goal"></textarea>
   <textarea class="notes-input" placeholder="Other Notes"></textarea>
   <input type="checkbox" id="checkbox18">
   <label for="checkbox18"></label>
 </div><hr><br>
 
-<div class="schedule-row">
-  <input type="text" class="time-input" value="7:40 AM - 8:05 AM" readonly>
-  <textarea class="activity-input" placeholder="Priority 1"></textarea>
+<!-- Add 5-minute break -->
+<div class="schedule-row"><h4>Activity 15</h4>
+  <input type="text" class="time-input" value="7:30 AM - 7:55 AM" 
+>
+  <textarea class="activity-input" placeholder="Priority/Side
+"></textarea>
   <textarea class="goal-input" placeholder="Goal"></textarea>
   <textarea class="notes-input" placeholder="Other Notes"></textarea>
   <input type="checkbox" id="checkbox19">
   <label for="checkbox19"></label>
 </div><hr><br>
 
-<div class="schedule-row">
-  <input type="text" class="time-input" value="8:20 AM - 8:45 AM" readonly>
-  <textarea class="activity-input" placeholder="Priority 1"></textarea>
+<div class="schedule-row"><h4>Activity 16</h4>
+  <input type="text" class="time-input" value="8:00 AM - 8:25 AM" 
+>
+  <textarea class="activity-input" placeholder="Priority/Side
+"></textarea>
   <textarea class="goal-input" placeholder="Goal"></textarea>
   <textarea class="notes-input" placeholder="Other Notes"></textarea>
   <input type="checkbox" id="checkbox20">
   <label for="checkbox20"></label>
 </div><hr><br>
 
-<!-- Add 15-minute break -->
-<div class="schedule-row">
-  <input type="text" class="time-input" value="9:00 AM - 9:25 AM" readonly>
-  <textarea class="activity-input" placeholder="Priority 1"></textarea>
+<!-- Add 5-minute break -->
+<div class="schedule-row"><h4>Activity 17</h4>
+  <input type="text" class="time-input" value="8:40 AM - 9:05 AM" 
+>
+  <textarea class="activity-input" placeholder="Priority/Side
+"></textarea>
   <textarea class="goal-input" placeholder="Goal"></textarea>
   <textarea class="notes-input" placeholder="Other Notes"></textarea>
   <input type="checkbox" id="checkbox21">
   <label for="checkbox21"></label>
 </div><hr><br>
-<div class="schedule-row">
-  <input type="text" class="time-input" value="9:30 AM - 9:55 AM" readonly>
-  <textarea class="activity-input" placeholder="Priority 1"></textarea>
+
+<div class="schedule-row"><h4>Activity 18</h4>
+  <input type="text" class="time-input" value="9:10 AM - 9:35 AM" 
+>
+  <textarea class="activity-input" placeholder="Priority/Side
+"></textarea>
   <textarea class="goal-input" placeholder="Goal"></textarea>
   <textarea class="notes-input" placeholder="Other Notes"></textarea>
   <input type="checkbox" id="checkbox22">
   <label for="checkbox22"></label>
 </div><hr><br>
 
-<div class="schedule-row">
-  <input type="text" class="time-input" value="10:00 AM - 10:25 AM" readonly>
-  <textarea class="activity-input" placeholder="Priority 1"></textarea>
+<div class="schedule-row"><h4>Activity 19</h4>
+  <input type="text" class="time-input" value="9:40 AM - 10:05 AM" 
+>
+  <textarea class="activity-input" placeholder="Priority/Side
+"></textarea>
   <textarea class="goal-input" placeholder="Goal"></textarea>
   <textarea class="notes-input" placeholder="Other Notes"></textarea>
   <input type="checkbox" id="checkbox23">
   <label for="checkbox23"></label>
 </div><hr><br>
 
-<div class="schedule-row">
-  <input type="text" class="time-input" value="10:40 AM - 11:05 AM" readonly>
-  <textarea class="activity-input" placeholder="Priority 1"></textarea>
+<div class="schedule-row"><h4>Activity 20</h4>
+  <input type="text" class="time-input" value="10:10 AM - 10:35 AM" 
+>
+  <textarea class="activity-input" placeholder="Priority/Side
+"></textarea>
   <textarea class="goal-input" placeholder="Goal"></textarea>
   <textarea class="notes-input" placeholder="Other Notes"></textarea>
   <input type="checkbox" id="checkbox24">
   <label for="checkbox24"></label>
 </div><hr><br>
 
-<!-- Add 15-minute break -->
-<div class="schedule-row">
-  <input type="text" class="time-input" value="11:20 AM - 11:45 AM" readonly>
-  <textarea class="activity-input" placeholder="Priority 1"></textarea>
+<!-- Add 5-minute break -->
+<div class="schedule-row"><h4>Activity 21</h4>
+  <input type="text" class="time-input" value="10:50 AM - 11:15 AM" 
+>
+  <textarea class="activity-input" placeholder="Priority/Side
+"></textarea>
   <textarea class="goal-input" placeholder="Goal"></textarea>
   <textarea class="notes-input" placeholder="Other Notes"></textarea>
   <input type="checkbox" id="checkbox25">
   <label for="checkbox25"></label>
 </div><hr><br>
-<!-- Continue the pattern for the rest of the day... -->
 
-<div class="schedule-row">
-  <input type="text" class="time-input" value="11:50 AM - 12:15 PM" readonly>
-  <textarea class="activity-input" placeholder="Priority 1"></textarea>
+<div class="schedule-row"><h4>Activity 22</h4>
+  <input type="text" class="time-input" value="11:20 AM - 11:45 AM" 
+>
+  <textarea class="activity-input" placeholder="Priority/Side
+"></textarea>
   <textarea class="goal-input" placeholder="Goal"></textarea>
   <textarea class="notes-input" placeholder="Other Notes"></textarea>
   <input type="checkbox" id="checkbox26">
   <label for="checkbox26"></label>
 </div><hr><br>
 
-<div class="schedule-row">
-  <input type="text" class="time-input" value="12:20 PM - 12:45 PM" readonly>
-  <textarea class="activity-input" placeholder="Priority 1"></textarea>
+<div class="schedule-row"><h4>Activity 23</h4>
+  <input type="text" class="time-input" value="11:50 AM - 12:15 PM" 
+>
+  <textarea class="activity-input" placeholder="Priority/Side
+"></textarea>
   <textarea class="goal-input" placeholder="Goal"></textarea>
   <textarea class="notes-input" placeholder="Other Notes"></textarea>
-  <input type="checkbox" id="checkbox27">
-  <label for="checkbox27"></label>
+  <input type="checkbox" id="checkbox26">
+  <label for="checkbox26"></label>
 </div><hr><br>
 
-<div class="schedule-row">
-  <input type="text" class="time-input" value="1:00 PM - 1:25 PM" readonly>
-  <textarea class="activity-input" placeholder="Priority 1"></textarea>
+
+<!-- Continue the pattern for the rest of the day... -->
+
+        </div><hr><br>
+
+        <div class="column">
+            <!-- Content for the second column -->
+            <div class="schedule-row"><h4>Activity 24</h4>
+              <input type="text" class="time-input" value="12:20 PM - 12:45 PM" 
+>
+              <textarea class="activity-input" placeholder="Priority/Side
+"></textarea>
+              <textarea class="goal-input" placeholder="Goal"></textarea>
+              <textarea class="notes-input" placeholder="Other Notes"></textarea>
+              <input type="checkbox" id="checkbox26">
+              <label for="checkbox26"></label>
+            </div><hr><br>
+            
+      <div class="schedule-row"><h4>Activity 25</h4>
+  <input type="text" class="time-input" value="1:00 PM - 1:25 PM" 
+>
+  <textarea class="activity-input" placeholder="Priority/Side
+"></textarea>
   <textarea class="goal-input" placeholder="Goal"></textarea>
   <textarea class="notes-input" placeholder="Other Notes"></textarea>
   <input type="checkbox" id="checkbox28">
@@ -329,18 +503,22 @@ body {
 </div><hr><br>
 
 <!-- Add 15-minute break -->
-<div class="schedule-row">
-  <input type="text" class="time-input" value="1:40 PM - 2:05 PM" readonly>
-  <textarea class="activity-input" placeholder="Priority 1"></textarea>
+<div class="schedule-row"><h4>Activity 26</h4>
+  <input type="text" class="time-input" value="1:30 PM - 1:55 PM" 
+>
+  <textarea class="activity-input" placeholder="Priority/Side
+"></textarea>
   <textarea class="goal-input" placeholder="Goal"></textarea>
   <textarea class="notes-input" placeholder="Other Notes"></textarea>
   <input type="checkbox" id="checkbox29">
   <label for="checkbox29"></label>
 </div><hr><br>
 
-<div class="schedule-row">
-  <input type="text" class="time-input" value="2:10 PM - 2:35 PM" readonly>
-  <textarea class="activity-input" placeholder="Priority 1"></textarea>
+<div class="schedule-row"><h4>Activity 27</h4>
+  <input type="text" class="time-input" value="2:00 PM - 2:25 PM" 
+>
+  <textarea class="activity-input" placeholder="Priority/Side
+"></textarea>
   <textarea class="goal-input" placeholder="Goal"></textarea>
   <textarea class="notes-input" placeholder="Other Notes"></textarea>
   <input type="checkbox" id="checkbox30">
@@ -353,27 +531,33 @@ body {
 
 <!-- Continue the pattern for the rest of the day... -->
 
-<div class="schedule-row">
-  <input type="text" class="time-input" value="2:40 PM - 3:05 PM" readonly>
-  <textarea class="activity-input" placeholder="Priority 1"></textarea>
+<div class="schedule-row"><h4>Activity 28</h4>
+  <input type="text" class="time-input" value="2:30 PM - 2:55 PM" 
+>
+  <textarea class="activity-input" placeholder="Priority/Side
+"></textarea>
   <textarea class="goal-input" placeholder="Goal"></textarea>
   <textarea class="notes-input" placeholder="Other Notes"></textarea>
   <input type="checkbox" id="checkbox31">
   <label for="checkbox31"></label>
 </div><hr><br>
 
-<div class="schedule-row">
-  <input type="text" class="time-input" value="3:10 PM - 3:35 PM" readonly>
-  <textarea class="activity-input" placeholder="Priority 1"></textarea>
+<div class="schedule-row"><h4>Activity 29</h4>
+  <input type="text" class="time-input" value="3:10 PM - 3:35 PM" 
+>
+  <textarea class="activity-input" placeholder="Priority/Side
+"></textarea>
   <textarea class="goal-input" placeholder="Goal"></textarea>
   <textarea class="notes-input" placeholder="Other Notes"></textarea>
   <input type="checkbox" id="checkbox32">
   <label for="checkbox32"></label>
 </div><hr><br>
 
-<div class="schedule-row">
-  <input type="text" class="time-input" value="3:40 PM - 4:05 PM" readonly>
-  <textarea class="activity-input" placeholder="Priority 1"></textarea>
+<div class="schedule-row"><h4>Activity 30</h4>
+  <input type="text" class="time-input" value="3:40 PM - 4:05 PM" 
+>
+  <textarea class="activity-input" placeholder="Priority/Side
+"></textarea>
   <textarea class="goal-input" placeholder="Goal"></textarea>
   <textarea class="notes-input" placeholder="Other Notes"></textarea>
   <input type="checkbox" id="checkbox33">
@@ -381,36 +565,44 @@ body {
 </div><hr><br>
 
 <!-- Add 15-minute break -->
-<div class="schedule-row">
-  <input type="text" class="time-input" value="4:20 PM - 4:45 PM" readonly>
-  <textarea class="activity-input" placeholder="Priority 1"></textarea>
+<div class="schedule-row"><h4>Activity 31</h4>
+  <input type="text" class="time-input" value="4:10 PM - 4:35 PM" 
+>
+  <textarea class="activity-input" placeholder="Priority/Side
+"></textarea>
   <textarea class="goal-input" placeholder="Goal"></textarea>
   <textarea class="notes-input" placeholder="Other Notes"></textarea>
   <input type="checkbox" id="checkbox34">
   <label for="checkbox34"></label>
 </div><hr><br>
 
-<div class="schedule-row">
-  <input type="text" class="time-input" value="4:50 PM - 5:15 PM" readonly>
-  <textarea class="activity-input" placeholder="Priority 1"></textarea>
+<div class="schedule-row"><h4>Activity 32</h4>
+  <input type="text" class="time-input" value="4:40 PM - 5:05 PM" 
+>
+  <textarea class="activity-input" placeholder="Priority/Side
+"></textarea>
   <textarea class="goal-input" placeholder="Goal"></textarea>
   <textarea class="notes-input" placeholder="Other Notes"></textarea>
   <input type="checkbox" id="checkbox35">
   <label for="checkbox35"></label>
 </div><hr><br>
 
-<div class="schedule-row">
-  <input type="text" class="time-input" value="5:20 PM - 5:45 PM" readonly>
-  <textarea class="activity-input" placeholder="Priority 1"></textarea>
+<div class="schedule-row"><h4>Activity 33</h4>
+  <input type="text" class="time-input" value="5:20 PM - 5:45 PM" 
+>
+  <textarea class="activity-input" placeholder="Priority/Side
+"></textarea>
   <textarea class="goal-input" placeholder="Goal"></textarea>
   <textarea class="notes-input" placeholder="Other Notes"></textarea>
   <input type="checkbox" id="checkbox36">
   <label for="checkbox36"></label>
 </div><hr><br>
 
-<div class="schedule-row">
-  <input type="text" class="time-input" value="6:00 PM - 6:25 PM" readonly>
-  <textarea class="activity-input" placeholder="Priority 1"></textarea>
+<div class="schedule-row"><h4>Activity 34</h4>
+  <input type="text" class="time-input" value="5:50 PM - 6:15 PM" 
+>
+  <textarea class="activity-input" placeholder="Priority/Side
+"></textarea>
   <textarea class="goal-input" placeholder="Goal"></textarea>
   <textarea class="notes-input" placeholder="Other Notes"></textarea>
   <input type="checkbox" id="checkbox37">
@@ -418,36 +610,44 @@ body {
 </div><hr><br>
 
 <!-- Add 15-minute break -->
-<div class="schedule-row">
-  <input type="text" class="time-input" value="6:40 PM - 7:05 PM" readonly>
-  <textarea class="activity-input" placeholder="Priority 1"></textarea>
+<div class="schedule-row"><h4>Activity 35</h4>
+  <input type="text" class="time-input" value="6:20 PM - 6:45 PM" 
+>
+  <textarea class="activity-input" placeholder="Priority/Side
+"></textarea>
   <textarea class="goal-input" placeholder="Goal"></textarea>
   <textarea class="notes-input" placeholder="Other Notes"></textarea>
   <input type="checkbox" id="checkbox38">
   <label for="checkbox38"></label>
 </div><hr><br>
 
-<div class="schedule-row">
-  <input type="text" class="time-input" value="7:10 PM - 7:35 PM" readonly>
-  <textarea class="activity-input" placeholder="Priority 1"></textarea>
+<div class="schedule-row"><h4>Activity 36</h4>
+  <input type="text" class="time-input" value="6:50 PM - 7:15 PM" 
+>
+  <textarea class="activity-input" placeholder="Priority/Side
+"></textarea>
   <textarea class="goal-input" placeholder="Goal"></textarea>
   <textarea class="notes-input" placeholder="Other Notes"></textarea>
   <input type="checkbox" id="checkbox39">
   <label for="checkbox39"></label>
 </div><hr><br>
 
-<div class="schedule-row">
-  <input type="text" class="time-input" value="7:40 PM - 8:05 PM" readonly>
-  <textarea class="activity-input" placeholder="Priority 1"></textarea>
+<div class="schedule-row"><h4>Activity 37</h4>
+  <input type="text" class="time-input" value="7:30 PM - 7:55 PM" 
+>
+  <textarea class="activity-input" placeholder="Priority/Side
+"></textarea>
   <textarea class="goal-input" placeholder="Goal"></textarea>
   <textarea class="notes-input" placeholder="Other Notes"></textarea>
   <input type="checkbox" id="checkbox40">
   <label for="checkbox40"></label>
 </div><hr><br>
 
-<div class="schedule-row">
-  <input type="text" class="time-input" value="8:20 PM - 8:45 PM" readonly>
-  <textarea class="activity-input" placeholder="Priority 1"></textarea>
+<div class="schedule-row"><h4>Activity 38</h4>
+  <input type="text" class="time-input" value="8:00 PM - 8:25 PM" 
+>
+  <textarea class="activity-input" placeholder="Priority/Side
+"></textarea>
   <textarea class="goal-input" placeholder="Goal"></textarea>
   <textarea class="notes-input" placeholder="Other Notes"></textarea>
   <input type="checkbox" id="checkbox41">
@@ -455,9 +655,11 @@ body {
 </div><hr><br>
 
 <!-- Add 15-minute break -->
-<div class="schedule-row">
-  <input type="text" class="time-input" value="9:00 PM - 9:25 PM" readonly>
-  <textarea class="activity-input" placeholder="Priority 1"></textarea>
+<div class="schedule-row"><h4>Activity 39</h4>
+  <input type="text" class="time-input" value="8:30 PM - 8:55 PM" 
+>
+  <textarea class="activity-input" placeholder="Priority/Side
+"></textarea>
   <textarea class="goal-input" placeholder="Goal"></textarea>
   <textarea class="notes-input" placeholder="Other Notes"></textarea>
   <input type="checkbox" id="checkbox42">
@@ -467,27 +669,33 @@ body {
 <!-- End of HTML document -->
 <!-- Continue the pattern for the rest of the day... -->
 
-<div class="schedule-row">
-  <input type="text" class="time-input" value="9:30 PM - 9:55 PM" readonly>
-  <textarea class="activity-input" placeholder="Priority 1"></textarea>
+<div class="schedule-row"><h4>Activity 40</h4>
+  <input type="text" class="time-input" value="9:00 PM - 9:25 PM" 
+>
+  <textarea class="activity-input" placeholder="Priority/Side
+"></textarea>
   <textarea class="goal-input" placeholder="Goal"></textarea>
   <textarea class="notes-input" placeholder="Other Notes"></textarea>
   <input type="checkbox" id="checkbox43">
   <label for="checkbox43"></label>
 </div><hr><br>
 
-<div class="schedule-row">
-  <input type="text" class="time-input" value="10:00 PM - 10:25 PM" readonly>
-  <textarea class="activity-input" placeholder="Priority 1"></textarea>
+<div class="schedule-row"><h4>Activity 41</h4>
+  <input type="text" class="time-input" value="9:40 PM - 10:05 PM" 
+>
+  <textarea class="activity-input" placeholder="Priority/Side
+"></textarea>
   <textarea class="goal-input" placeholder="Goal"></textarea>
   <textarea class="notes-input" placeholder="Other Notes"></textarea>
   <input type="checkbox" id="checkbox44">
   <label for="checkbox44"></label>
 </div><hr><br>
 
-<div class="schedule-row">
-  <input type="text" class="time-input" value="10:40 PM - 11:05 PM" readonly>
-  <textarea class="activity-input" placeholder="Priority 1"></textarea>
+<div class="schedule-row"><h4>Activity 42</h4>
+  <input type="text" class="time-input" value="10:10 PM - 10:35 PM" 
+>
+  <textarea class="activity-input" placeholder="Priority/Side
+"></textarea>
   <textarea class="goal-input" placeholder="Goal"></textarea>
   <textarea class="notes-input" placeholder="Other Notes"></textarea>
   <input type="checkbox" id="checkbox45">
@@ -495,35 +703,61 @@ body {
 </div><hr><br>
 
 <!-- Add 15-minute break -->
-<div class="schedule-row">
-  <input type="text" class="time-input" value="11:20 PM - 11:45 PM" readonly>
-  <textarea class="activity-input" placeholder="Priority 1"></textarea>
+<div class="schedule-row"><h4>Activity 43</h4>
+  <input type="text" class="time-input" value="10:40 PM - 11:05 PM" 
+>
+  <textarea class="activity-input" placeholder="Priority/Side
+"></textarea>
   <textarea class="goal-input" placeholder="Goal"></textarea>
   <textarea class="notes-input" placeholder="Other Notes"></textarea>
   <input type="checkbox" id="checkbox46">
   <label for="checkbox46"></label>
 </div><hr><br>
 
-<div class="schedule-row">
-  <input type="text" class="time-input" value="11:50 PM - 12:15 AM" readonly>
-  <textarea class="activity-input" placeholder="Priority 1"></textarea>
+<div class="schedule-row"><h4>Activity 44</h4>
+  <input type="text" class="time-input" value="11:10 PM - 11:35 PM" 
+>
+  <textarea class="activity-input" placeholder="Priority/Side
+"></textarea>
   <textarea class="goal-input" placeholder="Goal"></textarea>
   <textarea class="notes-input" placeholder="Other Notes"></textarea>
   <input type="checkbox" id="checkbox47">
   <label for="checkbox47"></label>
 </div><hr><br>
-
-<!-- End of HTML document -->
-
-        <!-- Repeat for the entire day -->
-
+<div class="schedule-row"><h4>Activity 45</h4>
+  <input type="text" class="time-input" value="11:40 PM - 12:00 AM" 
+>
+  <textarea class="activity-input" placeholder="Priority/Side
+"></textarea>
+  <textarea class="goal-input" placeholder="Goal"></textarea>
+  <textarea class="notes-input" placeholder="Other Notes"></textarea>
+  <input type="checkbox" id="checkbox47">
+  <label for="checkbox47"></label>
+</div><hr><br>
+        </div>
     </div>
+  </div>
+   <!-- Textbox for summarizing achievements -->
+   <textarea id="achievement-summary" placeholder="Summarize Achievements, Goals Achieved, & Self Reflection. Did I follow the schedule well?"></textarea>
+   <textarea id="achievement-summary" placeholder="How productive/distracted did I get? Was I working intensely but sustainably, or taking it too slow?"></textarea>
+   <textarea id="achievement-summary" placeholder="Did I achieve the various atomic habits? Did I have good EQ and used productivity various tech and desk setup for health? Did I settle all new tabs and notes well?"></textarea>
+   <script>
+    // Add an event listener for the 'beforeunload' event
+    window.addEventListener('beforeunload', function (event) {
+        // Prompt the user to confirm closing the page
+        var confirmationMessage = 'Type "I want to close out" to confirm closing the page.';
+        prompt(confirmationMessage);
+        event.preventDefault(); // Prevent the default behavior (closing the page)
+    });
 
-    <!-- Textbox for summarizing achievements -->
-    <textarea id="achievement-summary" placeholder="Summarize Achievements, Goals Achieved, & Self Reflection. Did I follow the schedule well?"></textarea>
-    <textarea id="achievement-summary" placeholder="How productive/distracted did I get? Was I working intensely but sustainably, or taking it too slow?"></textarea>
-    <textarea id="achievement-summary" placeholder="Did I achieve the various atomic habits? Did I have good EQ and used productivity various tech and desk setup for health? Did I settle all new tabs and notes well?"></textarea>
-
-  </body>
+    // Add an event listener for the 'keydown' event
+    document.addEventListener('keydown', function (event) {
+        // Check if the pressed key is Enter and the specified message is typed
+        if (event.key === 'Enter' && event.target.value.trim().toLowerCase() === 'i want to close out') {
+            // Allow closing the page if the correct message is typed
+            window.removeEventListener('beforeunload', function () {});
+        }
+    });
+</script>
+</body>
 </html>
-
