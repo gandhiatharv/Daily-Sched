@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule Generator</title>
+</head>
+<body>
+
+    <h1>Schedule Generator</h1>
+    <link rel="stylesheet" href="style.css">
+
+    <form id="scheduleForm">
+
+        <div>
+            <label for="priority1">Priority 1:</label>
+            <input type="text" id="priority1" name="priority1" required>
+        </div>
+
+        <div>
+            <label for="priority2">Priority 2:</label>
+            <input type="text" id="priority2" name="priority2" required>
+        </div>
+
+        <div>
+            <label for="priority3">Priority 3:</label>
+            <input type="text" id="priority3" name="priority3" required>
+        </div>
+
+        <div>
+            <label for="priority4">Priority 4:</label>
+            <input type="text" id="priority4" name="priority4" required>
+        </div>
+
+        <div>
+            <label for="priority5">Priority 5:</label>
+            <input type="text" id="priority5" name="priority5" required>
+        </div>
+
+        <div>
+            <label>Choose up to 3 "Sides":</label>
+            <input type="checkbox" name="sides" value="enrichment"> 5 Enrichment Stuff
+            <input type="checkbox" name="sides" value="compsci"> 4 CompSci Branches
+            <input type="checkbox" name="sides" value="media"> 5 Media Sources
+            <input type="checkbox" name="sides" value="neuroscience"> Neuroscience Investigation
+            <input type="checkbox" name="sides" value="business"> Business/Politics/Real World Events/Surfing the Web Investigation
+            <input type="checkbox" name="sides" value="revision"> Tab Revision and Systems Creation
+        </div>
+
+        <button type="button" onclick="generateSchedule()">Generate Schedule</button>
+
+        <div id="scheduleDisplay"></div>
+
+    </form>
+
+    <script>
+        function generateSchedule() {
+            var currentTime = new Date();
+            var scheduleDisplay = document.getElementById('scheduleDisplay');
+            scheduleDisplay.innerHTML = ''; // Clear previous schedule
+
+            var priorities = [
+                document.getElementById('priority1').value,
+                document.getElementById('priority2').value,
+                document.getElementById('priority3').value,
+                document.getElementById('priority4').value,
+                document.getElementById('priority5').value
+            ];
+
+            var selectedSides = document.querySelectorAll('input[name="sides"]:checked');
+            var sides = Array.from(selectedSides).map(side => side.value).slice(0, 3); // Limit to 3 selections
+
+            var schedule = [];
+
+            // Generate schedule for priorities and sides
+            for (var i = 0; i < priorities.length; i++) {
+                for (var j = 0; j < 2; j++) { // Repeat each priority twice
+                    schedule.push({
+                        start: formatTime(currentTime),
+                        end: formatTime(new Date(currentTime.getTime() + 25 * 60000)),
+                        task: 'Priority ' + (i + 1) + ': ' + priorities[i]
+                    });
+
+                    currentTime = new Date(currentTime.getTime() + 30 * 60000);
+
+                    // Add side between priorities if available
+                    if (i < sides.length) {
+                        schedule.push({
+                            start: formatTime(currentTime),
+                            end: formatTime(new Date(currentTime.getTime() + 25 * 60000)),
+                            task: 'Side ' + (i + 1) + ': ' + sides[i]
+                        });
+
+                        currentTime = new Date(currentTime.getTime() + 30 * 60000);
+                    }
+                }
+            }
+
+            // Display the schedule
+            schedule.forEach(item => {
+                scheduleDisplay.innerHTML += `${item.start} to ${item.end}: ${item.task}<br>`;
+            });
+        }
+
+        function formatTime(time) {
+            var hours = time.getHours();
+            var minutes = time.getMinutes();
+            return hours + ':' + (minutes < 10 ? '0' : '') + minutes;
+        }
+    </script>
+
+</body>
+</html>
