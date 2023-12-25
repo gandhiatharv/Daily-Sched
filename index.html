@@ -230,6 +230,12 @@ a{
     padding: 10px;
     margin: 5px 0;
 }
+.custom-list h6 {
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 0;
+  font-weight: normal;
+  }
 
 h2 {
     color: #333;
@@ -260,6 +266,11 @@ h2 {
 .custom-list li:hover {
     background-color: #a3c2c2; /* Change the background color on hover */
 }
+.custom-list h6 {
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 0;
+}
 
 h2 {
     color: #333;
@@ -296,6 +307,15 @@ h2 {
             background-color: #4caf50; /* Green color when selected */
             color: #fff; /* White text on green background */
         }
+        
+
+        .custom-list h6 {
+            border-radius: 5px;
+            padding: 10px;
+            margin: 5px 0;
+            cursor: pointer;
+        }
+
         .list-container {
             background-color: #fff;
             border-radius: 10px;
@@ -317,7 +337,8 @@ h2 {
             margin: 5px 0;
             transition: background-color 0.3s ease; /* Smooth transition effect */
             cursor: pointer;
-            width:365px
+            width:365px;
+            
         }
        
 
@@ -329,6 +350,17 @@ h2 {
             background-color: #4caf50; /* Green color when selected */
             color: #fff; /* White text on green background */
         }
+
+
+        .custom-list h6 {
+            border-radius: 5px;
+            padding: 10px;
+            margin: 5px 0;
+            cursor: pointer;
+            width:365px;
+            font-size: 13px;
+        }
+       
         .schedule-row:hover {
             background-color: #D8F0F9;
             transition: background-color 0.3s ease; /* Smooth transition effect */
@@ -430,38 +462,38 @@ h2 {
           </ul>
           <h2>Priorities (Pick ~ 5-6)</h2>
           <ul class="custom-list" onclick="toggleAndCopyToClipboard(event)">
-              <li>Vohra Ivy Strat Work</li>
-              <li>AP Prep- 5 Media Sources, Long Term Retention System, Reading Comp, etc</li>
-              <li>Debate work 3 types</li>Debate docs, literature/knowledge, drills
-              <li>School HW</li>
-              <li>General 5 Media Sources, Knowledge+Subjects Learning/Training</li>Videos+Books+Podcasts+Reading Material like Heimler & Crash Course All Subjects including sciences branches
-              <li>Bass Practice</li>
-              <li>Comp Editing Various Types</li>
-              <li>Cybersecurity/Cryptography</li>
-              <li>BYJU's CompSci Colab Training</li>
-              <li>JSX Documentation/Udemy CompSci Training</li>
-              <li>HTML, CSS, JS FreeCodeCamp Training</li>
-              <li>Unreal Engine/C++ (and Blender) Course(s)</li>(like from Udemy)
-              
-              <li>C++ & Robotics: C++ Courses, FreeCodeCamp Other/All Resources, Robotics Guy Vid(s), Codecademy, Arduinos and Raspberry Pi</li>C++ Course FreeCodeCamp/FreeCodeCamp Other Resources like Augmented Reality/C++ Udemy Courses/That Robotics Guy Vid (Robotics with Sina, Learn Robotics & AI)/C++ for Robotics Course from The Construct (bit.ly/48tXf0G)
-              <li>Main Majors Subjects Learning Training</li> Even Complex Advanced Ones Learning Building Through Foundation, Knowledge Gaining, Connections, Vocab, Feynmann Technique, Other Neuroscience Techniques etc (like Compsci, Engineering types, Physics, Biotech/disease detectives, Spacetech, Environmental science, comp engineering, robotics, hardware and software, etc)
-<li>Neuroscience Investigation</li>Rapid Learner (Scott Young), Vohra, Heimler, Cortex Evolution (Dan Lathan), Superhuman Academy (Jon Levi), Cajun Koi, Bright Side, Better than Yesterday, and more beyond etc
-<li>Reading and Speed Reading Learning/Training</li>(from Books, Literature, Reading Material etc)
-<li>Textbooks working through like Barron's</li>(i.e. Chem, Bio, Phys, History, Hist Specific Branches, Other Subjects, etc)
-              <li>Math</li>
-              <li>Creating Stuff like 5 Media Sources and More</li>Systems, Cajun Koi, Vids, YouTube Vids, Computer Programs, Different Types of Development etc: Books, Documentaries, Videos, Podcasts, 5 Media Sources All Types of Creation Skills Learning Training Developing
-              
-              <li>4 'P's, 4 Rhet Arts, 4 Language Aspects</li>4 'P's and 4 Rhetorical Arts and 4 Language Aspects Investigation (and Logic, Rhetoric Fallacies, Persuasion, etc)
-              <li>Business/Finance/Econ, Politics/Current Events/History, Passions & Things I'm Interested In</li>Economy, Financial Literacy
-              <li>Comedy + Ppl Skills</li>
-              <li>Self learning+learning+long term retention 3-4-5</li>
-              <li>Journaling/EQ/Introspection/<br>Leadership Skills</li>
-              <li>BrainHQ Skills Developing like listening</li> Training to become better and faster and listening better, getting better at various skills on Skills to Develop List Doc
-              <li>Vohra Impromptu Speaking, Writing, Rap An Reading          </li>Vohra Training Powerful Quick Fast Well Speed Quality Developing of Impromptu Speaking (with knowledge and vocal variety), Writing All Genres and Lengths of Writing, Rap An Reading (and developing the skills learnt in Vohra Learn Politics and Beginner/Advanced Rhetorical Arts Summer Classes Learning Training From)
-              <li>History and General Knowledge Learning</li>Advanced In Depth Content Knowledge Gaining + Creative/Analytical Skills and 3 Creativity Types Developing
-              <li>Spirituality, EQ, Mindfulness</li>Emotional Control, Meditation, Niceness
-              <li>4 Main Languages to Learn</li>English, Spanish, Hindi, Gujarati learning
-          </ul>
+            <li>Vohra Ivy Strat Work</li>
+            <li>AP Prep- 5 Media Sources, Long Term Retention System, Reading Comp, etc</li>
+            <li>Debate work 3 types </li><h6>Debate docs, literature/knowledge, drills</h6>
+            <li>School HW</li>
+            <li>General 5 Media Sources, Knowledge+Subjects Learning/Training </li><h6>Videos+Books+Podcasts+Reading Material like Heimler & Crash Course All Subjects including sciences branches</h6>
+            <li>Bass Practice</li>
+            <li>Comp Editing Various Types</li>
+            <li>Cybersecurity/Cryptography</li>
+            <li>BYJU's CompSci Colab Training</li>
+            <li>JSX Documentation/Udemy CompSci Training</li>
+            <li>HTML, CSS, JS FreeCodeCamp Training</li>
+            <li>Unreal Engine/C++ (and Blender) Course(s) </li><h6>(like from Udemy)</h6>
+            
+            <li>C++ & Robotics: C++ Courses, FreeCodeCamp Other/All Resources, Robotics Guy Vid(s), Codecademy, Arduinos and Raspberry Pi </li><h6>C++ Course FreeCodeCamp/FreeCodeCamp Other Resources like Augmented Reality/C++ Udemy Courses/That Robotics Guy Vid (Robotics with Sina, Learn Robotics & AI)/C++ for Robotics Course from The Construct (bit.ly/48tXf0G)</h6>
+            <li>Main Majors Subjects Learning Training </li><h6> Even Complex Advanced Ones Learning Building Through Foundation, Knowledge Gaining, Connections, Vocab, Feynmann Technique, Other Neuroscience Techniques etc (like Compsci, Engineering types, Physics, Biotech/disease detectives, Spacetech, Environmental science, comp engineering, robotics, hardware and software, etc)</h6>
+<li>Neuroscience Investigation </li><h6>Rapid Learner (Scott Young), Vohra, Heimler, Cortex Evolution (Dan Lathan), Superhuman Academy (Jon Levi), Cajun Koi, Bright Side, Better than Yesterday, and more beyond etc</h6>
+<li>Reading and Speed Reading Learning/Training </li><h6>(from Books, Literature, Reading Material etc)</h6>
+<li>Textbooks working through like Barron's </li><h6>(i.e. Chem, Bio, Phys, History, Hist Specific Branches, Other Subjects, etc)</h6>
+            <li>Math</li>
+            <li>Creating Stuff like 5 Media Sources and More </li><h6>Systems, Cajun Koi, Vids, YouTube Vids, Computer Programs, Different Types of Development etc: Books, Documentaries, Videos, Podcasts, 5 Media Sources All Types of Creation Skills Learning Training Developing</h6>
+            
+            <li>4 'P's, 4 Rhet Arts, 4 Language Aspects </li><h6>4 'P's and 4 Rhetorical Arts and 4 Language Aspects Investigation (and Logic, Rhetoric Fallacies, Persuasion, etc)</h6>
+            <li>Business/Finance/Econ, Politics/Current Events/History, Passions & Things I'm Interested In </li><h6>Economy, Financial Literacy</h6>
+            <li>Comedy + Ppl Skills</li>
+            <li>Self learning+learning+long term retention 3-4-5</li>
+            <li>Journaling/EQ/Introspection/<br>Leadership Skills</li>
+            <li>BrainHQ Skills Developing like listening </li><h6>Training to become better and faster and listening better, getting better at various skills on Skills to Develop List Doc</h6>
+            <li>Vohra Impromptu Speaking, Writing, Rap An Reading </li><h6>Vohra Training Powerful Quick Fast Well Speed Quality Developing of Impromptu Speaking (with knowledge and vocal variety), Writing All Genres and Lengths of Writing, Rap An Reading (and developing the skills learnt in Vohra Learn Politics and Beginner/Advanced Rhetorical Arts Summer Classes Learning Training From)</h6>
+            <li>History and General Knowledge Learning </li><h6>Advanced In Depth Content Knowledge Gaining + Creative/Analytical Skills and 3 Creativity Types Developing</h6>
+            <li>Spirituality, EQ, Mindfulness </li><h6>Emotional Control, Meditation, Niceness</h6>
+            <li>4 Main Languages to Learn </li><h6>English, Spanish, Hindi, Gujarati learning</h6>
+        </ul>
   
           <h2>Sides (Pick ~ 3-4)</h2>
           <ul class="custom-list" onclick="toggleAndCopyToClipboard(event)">
