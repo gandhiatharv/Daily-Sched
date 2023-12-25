@@ -37,7 +37,7 @@
         .time-input, .activity-input, .goal-input, .notes-input {
             padding: 8px;
             margin-right: 5px;
-            height:50px;
+            height: 40px
         }
 
         .goal-input, .notes-input {
@@ -46,12 +46,12 @@
         .notes-input{
           width:280px
         }
+        .activity-input{
+          width: 175px;
+        }
         .time-input{
           width:130px
         }
-  .activity-input {
-  max-width: 175px; /* Set the maximum width of your text overlay */
-}
 
         .notes-input {
             resize: vertical; /* Allow vertical resizing */
@@ -66,10 +66,14 @@
             color: #fff;
         }
 
+        .time-input, .activity-input, .goal-input, .notes-input {
+            overflow-y: hidden; /* Hide vertical scrollbar */
+        }
 
-        .activity-input {
-  max-width: 175px; /* Set the maximum width of your text overlay */
-}
+        .time-input, .activity-input, .goal-input, .notes-input {
+            white-space: nowrap; /* No line breaks */
+        }
+
         .notes-input {
             white-space: normal; /* Allow line breaks */
         }
@@ -175,26 +179,15 @@ a{
             width: 580%; /* Adjust the width as needed */
             margin-left: 1800px;
         }
-        .rolitwo {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            background-color: #f4f4f4;
-            padding: 10px;
-            margin: 10px;
-            width: 580%; /* Adjust the width as needed */
-            margin-left: 1900px;
-        }
 
         .roli p {
             max-width: 100%; /* Allow paragraphs to take full width */
             margin: 5px; /* Remove default margin for paragraphs */
-            line-height: 1.5;
             font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         }
         .vertical-line {
     border-left: 2px solid #000; /* Adjust the thickness and color as needed */
-    height: 305px; /* Adjust the height as needed */
+    height: 200px; /* Adjust the height as needed */
     margin: 0 20px; /* Adjust the margin to control the space around the line */
 }
 .list-container {
@@ -320,41 +313,7 @@ h2 {
             transition: background-color 0.3s ease; /* Smooth transition effect */
 
         }
-        .underline-text {
-            text-decoration: underline;
-        }
-        
-        
-        .custom-list2 {
-            list-style-type: none; /* Remove default list styles */
-            padding: 0;
-        }
 
-        .custom-list2 li {
-            background-color: #4caf50;
-            color:#fff;
-            border-radius: 5px;
-            padding: 10px;
-            margin: 5px 0;
-            transition: background-color 0.3s ease; /* Smooth transition effect */
-            cursor: pointer;
-            width:280px
-        }
-
-        .custom-list2 li:hover {
-            background-color: #a3c2c2; /* Change the background color on hover */
-        }
-
-        .custom-list2 li.selected {
-            background-color: #ddd; /* Green color when selected */
-            color: black; /* White text on green background */
-        }
-        .text-overlay {
-  max-width: 300px; /* Set the maximum width of your text overlay */
-  border: 1px solid #ccc; /* Optional: Add a border for better visualization */
-  padding: 10px; /* Optional: Add padding for better spacing */
-  height:50px;
-}
     </style>
 </head>
 <body>
@@ -366,23 +325,23 @@ h2 {
       <a href="https://docs.google.com/document/d/1e1G_ZtDaB53Veje_Nc6fnVbF7Qlna8YvihNtYxPUxnQ/edit?usp=sharing" target="_blank" style="color: blue; text-decoration: underline;">Subjects to Learn</a><p>
       <a href="https://docs.google.com/document/d/19ANDHr06WJha3KXZrI8_WoE51fCxFsNttkQES8gcliI/edit?usp=sharing" target="_blank" style="color: blue; text-decoration: underline;">Skills to Develop</a></p>
       <a href="https://docs.google.com/document/d/19knZ73bIiccBPDCJ3dHjd0ZMKNRCNZufS_3rSN9Ue1E/edit?usp=sharing" target="_blank" style="color: blue; text-decoration: underline;">Atomic Habits List</a></p>
+      <a href="https://forms.gle/HUapBfU2Kq4wCebSA" target="_blank" style="color: blue; text-decoration: underline;">End of Day Reflection Form</a></p>
       <div class="vertical-line"></div>
-<p><span class="underline-text">Rules:</span>
+<p>Rules:
         <br>a) On the spot, do goal setting and back against time limits for things to achieve, and beforehand have them done as well.
-        <br>b) Turn on and use pomodoro timer as well as CDN timer for timing work, time tracking, etc
+        <br>b) Turn on and use pomodoro timer
         <br>c) Activate and use the necessary/helpful extensions, like the ones to block sites
         <br>d) Follow the 3:1 rule for shorter more spread out punishments, and bigger punishments for generally not following sched/necessary Atomic Habits etc on the form
         <br>e) Giving myself 80% less time to do things rule (80/20 rule or Pareto Principle)
+        
         <br></p>   <div class="vertical-line"></div>
-        <p><span class="underline-text">Reminders:</span>
+        <p>Reminders:
           <br>a) Alternate priorities, and sandwiched between priorities, put sides. At least every other one should be a priority, if not more, and they can be repeated too.
           <br>b) Fall back on unproductive system if not being productive
           <br>c) Follow all Atomic Habits too on list, and following daily sched and doing all the start working subjects skills learning training developing activities
-          <br>d) End the day with both forms below and by crystallizing all tabs for easier revision
+          <br>d) Having preset and on the spot made daily schedules for good updated list of activities and things to be working on
           <br>e) Dopamine detox if necessary, give punishments and rewards as a) motive to get things done better quicker faster and more sustainably too and b) make sure I'm still able to do hard, mentally stimulating work like by having to face boredom
-          <br>f) During more dormant working times: a) Flashcards/long term retention system b) 5 Media Sources like (Ind Rdg) Books Vids Podcasts learning from c) Textbooks d) Other Fallback System Stuff
-          <br>g) Building and using the necessary contacts and connections: Scientists, teachers, Hardy, JaGe, Friends, Counselors, Principal, etc
-        <br></p>
+          <br></p>
 </div>
   <!--setting up cross platform both computers productivity systems and with bookmarks extensions shortcuts downloads applications etc and more, having the 
     necessary 5 enrichment+compsci/4 compsci branches and things like 5 passions and priorities like 3 hws and debate vohra compsci aps work time for daily and
@@ -398,52 +357,18 @@ h2 {
       <div class="column">
         <!-- Content for the second column -->
         <div class="list-container">
-          <h2>Required</h2>
-          <ul class="custom-list2" onclick="toggleAndCopyToClipboard(event)">
-              <li>Exercise</li>
-              <li>Household Chores</li>
-
-          </ul>
-          <h2>Priorities (Pick ~ 5-6)</h2>
+          <h2>Priorities</h2>
           <ul class="custom-list" onclick="toggleAndCopyToClipboard(event)">
-              <li>Vohra Ivy Strat Work</li>
-              <li>AP Prep- 5 Media Sources, Long Term Retention System, Reading Comp, etc</li>
-              <li>Debate work 3 types: debate docs, literature/knowledge, drills</li>
-              <li>School HW</li>
-              <li>General 5 Media Sources, Knowledge+Subjects Learning/Training, Videos+Books+Podcasts+Reading Material like Heimler & Crash Course All Subjects including sciences branches</li>
-              <li>Bass Practice</li>
-              <li>Comp Editing Various Types</li>
-              <li>Cybersecurity/Cryptography</li>
-              <li>BYJU's Compsci Colab Training</li>
-              <li>JSX Documentation/Udemy Compsci Training</li>
-              <li>HTML, CSS, JS FreeCodeCamp Training</li>
-              <li>Unreal Engine/C++ (and Blender) Course(s) Udemy</li>
-              
-              <li>C++ Course FreeCodeCamp/FreeCodeCamp Other Resources like Augmented Reality/C++ Udemy Courses/That Robotics Guy Vid (Robotics with Sina, Learn Robotics & AI)/C++ for Robotics Course from The Construct (bit.ly/48tXf0G)/Codecademy/<br>Arduinos and Raspberry Pi</li>
-              <li>Main Majors Learning Training like Compsci, Engineering types, Physics, Biotech/disease detectives, Spacetech, Environmental science, comp engineering, robotics, hardware and software, etc</li>
-<li>Neuroscience: Rapid Learner (Scott Young), Vohra, Heimler, Cortex Evolution (Dan Lathan), Superhuman Academy (Jon Levi), Cajun Koi, Bright Side, Better than Yesterday, and more beyond etc</li>
-<li>Reading and Speed Reading Learning/Training (from Books, Literature, Reading Material etc)</li>
-<li>Textbooks working through like Barron's i.e. Chem, Bio, Phys, History, Hist Specific Branches, Other Subjects, etc</li>
-              <li>Math</li>
-              <li>Creating Stuff: Systems, Cajun Koi, Vids, YouTube Vids, Computer Programs, Different Types of Development etc: Books, Documentaries, Videos, Podcasts, 5 Media Sources All Types of Creation Skills Learning Training Developing</li>
-              
-              <li>4 'P's and 4 Rhetorical Arts and 4 Language Aspects Investigation (and Logic, Rhetoric Fallacies, Persuasion, etc)</li>
-              <li>Business, Economy, Financial Literacy, Politics, Current Events, History, Things I'm Interested In</li>
-              <li>Comedy + Ppl Skills</li>
-              <li>Self learning+learning+long term retention 3-4-5</li>
-              <li>Journaling/EQ/Introspection/<br>Leadership Skills</li>
-              <li>BrainHQ skills developing training to become better and faster and listening better</li>
-              <li>Vohra Training Powerful Quick Fast Well Speed Quality Developing of Impromptu Speaking (with knowledge and vocal variety), Writing All Genres and Lengths of Writing, Rap An Reading (and developing the skills learnt in Vohra Learn Politics and Beginner/Advanced Rhetorical Arts Summer Classes Learning Training From)          </li>
-              <li>History and General Knowledge Advanced In Depth Content Knowledge Learning Gaining + Creative/Analytical Skills and 3 Creativity Types Developing</li>
-              <li>Spirituality, EQ, Emotional Control, Meditation, Mindfulness, Niceness</li>
-              <li>4 Main Languages to Learn: English, Spanish, Hindi, Gujarati learning</li>
+              <li>Item 1</li>
+              <li>Item 2</li>
+              <li>Item 3</li>
           </ul>
   
-          <h2>Sides (Pick ~ 3-4)</h2>
+          <h2>Sides</h2>
           <ul class="custom-list" onclick="toggleAndCopyToClipboard(event)">
               <li>5 Enrichment Daily Stuff</li>
               <li>4 Compsci Branches</li>
-              <li>5 Media Sources, APs, 3 Phases of Learning, Long Term Retention+Revision System of Content/Knowledge</li>
+              <li>5 Media Sources, APs, 3 Phases of Learning, Long Term Retention System</li>
               <li>Neuroscience Investigation</li>
               <li>Business/Politics/Real World Events/Surfing the Web Investigation</li>
               <li>Tab Revision and Systems Creation</li>
@@ -456,12 +381,8 @@ h2 {
             <div class="schedule-row"><h4>Activity 1</h4>
               <input type="text" class="time-input" value="12:00 AM - 12:25 AM" 
 >
-              <textarea class="activity-input" rows="5" placeholder="Priority/Side
+              <textarea class="activity-input" placeholder="Priority/Side
 "></textarea>
-<!--
-  <textarea class="text-overlay" rows="5"></textarea>
--->
-
               <textarea class="goal-input" placeholder="Goal"></textarea>
               <textarea class="notes-input" placeholder="Other Notes"></textarea>
               <input type="checkbox" id="checkbox1">
@@ -977,11 +898,7 @@ h2 {
     </div>
   </div>
    <!-- Textbox for summarizing achievements -->
-   <div class="rolitwo">
-
-   <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScVjagexuV4-irhklK_dM3XwbTZXOiE1g8qcMwtQ0rZNwORbw/viewform?embedded=true" width="900" height="1585" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-   <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdvGs8ozdF7xwMdgzH0yEFKRHrZmt4YafByBAzeDDrHiHCJIw/viewform?embedded=true" width="900" height="3150" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-   </div>
+   <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScVjagexuV4-irhklK_dM3XwbTZXOiE1g8qcMwtQ0rZNwORbw/viewform?embedded=true" width="640" height="1585" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
    <script>
     // Add an event listener for the 'beforeunload' event
     window.addEventListener('beforeunload', function (event) {
