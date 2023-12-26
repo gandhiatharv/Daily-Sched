@@ -16,6 +16,40 @@
     sizes="16x16"
     href="image-removebg-preview.png"
   />
+  <script>
+
+function saveProgress() {
+            // Get all textarea elements on the page
+            var textareas = document.getElementsByTagName('textarea');
+
+            // Save the progress for each textarea
+            for (var i = 0; i < textareas.length; i++) {
+                var textarea = textareas[i];
+                localStorage.setItem('progress_' + i, textarea.value);
+            }
+        }
+
+        function loadProgress() {
+            // Get all textarea elements on the page
+            var textareas = document.getElementsByTagName('textarea');
+
+            // Load and set the progress for each textarea
+            for (var i = 0; i < textareas.length; i++) {
+                var textarea = textareas[i];
+                var progress = localStorage.getItem('progress_' + i);
+                if (progress) {
+                    textarea.value = progress;
+                }
+            }
+        }
+
+        // Call loadProgress when the window has finished loading
+        window.onload = function() {
+            loadProgress();
+        };
+
+
+  </script>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -414,6 +448,7 @@ h2 {
     </style>
 </head>
 <body>
+
   <div class="roli">
     <!-- Add your row content here -->
     <p><a href="https://docs.google.com/spreadsheets/d/1MCz5SOvSrC6QT-o0gW5_Wet3LeLyxT_BLK_T-iVQCYQ/edit?usp=sharing" target="_blank" style="color: blue; text-decoration: underline;">Google Sheet Daily Schedule</a><br>
@@ -518,13 +553,13 @@ h2 {
               <input type="text" class="time-input" value="12:00 AM - 12:25 AM" 
 >
               <textarea class="activity-input" rows="5" placeholder="Priority/Side
-"></textarea>
+" id="progress" oninput="saveProgress()"></textarea>
 <!--
-  <textarea class="text-overlay" rows="5"></textarea>
+  <textarea class="text-overlay" rows="5" id="progress" oninput="saveProgress()"></textarea>
 -->
 
-              <textarea class="goal-input" placeholder="Goal"></textarea>
-              <textarea class="notes-input" placeholder="Other Notes"></textarea>
+              <textarea class="goal-input" placeholder="Goal" id="progress" oninput="saveProgress()"></textarea>
+              <textarea class="notes-input" placeholder="Other Notes" id="progress" oninput="saveProgress()"></textarea>
               <input type="checkbox" class="block-checkbox" id="checkbox1">
               <label for="checkbox1"></label>
           </div><hr><br>
@@ -532,9 +567,9 @@ h2 {
             <input type="text" class="time-input" value="12:30 AM - 12:55 AM" 
 >
             <textarea class="activity-input" placeholder="Priority/Side
-"></textarea>
-            <textarea class="goal-input" placeholder="Goal"></textarea>
-            <textarea class="notes-input" placeholder="Other Notes"></textarea>
+" id="progress" oninput="saveProgress()"></textarea>
+            <textarea class="goal-input" placeholder="Goal" id="progress" oninput="saveProgress()"></textarea>
+            <textarea class="notes-input" placeholder="Other Notes" id="progress" oninput="saveProgress()"></textarea>
             <input type="checkbox" class="block-checkbox" id="checkbox6">
             <label for="checkbox6"></label>
         </div><hr><br>
@@ -542,9 +577,9 @@ h2 {
           <input type="text" class="time-input" value="1:00 AM - 1:25 AM" 
 >
           <textarea class="activity-input" placeholder="Priority/Side
-"></textarea>
-          <textarea class="goal-input" placeholder="Goal"></textarea>
-          <textarea class="notes-input" placeholder="Other Notes"></textarea>
+" id="progress" oninput="saveProgress()"></textarea>
+          <textarea class="goal-input" placeholder="Goal" id="progress" oninput="saveProgress()"></textarea>
+          <textarea class="notes-input" placeholder="Other Notes" id="progress" oninput="saveProgress()"></textarea>
           <input type="checkbox" class="block-checkbox" id="checkbox7">
           <label for="checkbox7"></label>
       </div><hr><br>
@@ -553,9 +588,9 @@ h2 {
           <input type="text" class="time-input" value="1:30 AM - 1:55 AM" 
 >
           <textarea class="activity-input" placeholder="Priority/Side
-"></textarea>
-          <textarea class="goal-input" placeholder="Goal"></textarea>
-          <textarea class="notes-input" placeholder="Other Notes"></textarea>
+" id="progress" oninput="saveProgress()"></textarea>
+          <textarea class="goal-input" placeholder="Goal" id="progress" oninput="saveProgress()"></textarea>
+          <textarea class="notes-input" placeholder="Other Notes" id="progress" oninput="saveProgress()"></textarea>
           <input type="checkbox" class="block-checkbox" id="checkbox8">
           <label for="checkbox8"></label>
       </div><hr><br>
@@ -563,9 +598,9 @@ h2 {
         <input type="text" class="time-input" value="2:10 AM - 2:35 AM" 
 >
         <textarea class="activity-input" placeholder="Priority/Side
-"></textarea>
-        <textarea class="goal-input" placeholder="Goal"></textarea>
-        <textarea class="notes-input" placeholder="Other Notes"></textarea>
+" id="progress" oninput="saveProgress()"></textarea>
+        <textarea class="goal-input" placeholder="Goal" id="progress" oninput="saveProgress()"></textarea>
+        <textarea class="notes-input" placeholder="Other Notes" id="progress" oninput="saveProgress()"></textarea>
         <input type="checkbox" class="block-checkbox" id="checkbox9">
         <label for="checkbox9"></label>
     </div><hr><br>
@@ -573,9 +608,9 @@ h2 {
       <input type="text" class="time-input" value="2:40 AM - 3:05 AM" 
 >
       <textarea class="activity-input" placeholder="Priority/Side
-"></textarea>
-      <textarea class="goal-input" placeholder="Goal"></textarea>
-      <textarea class="notes-input" placeholder="Other Notes"></textarea>
+" id="progress" oninput="saveProgress()"></textarea>
+      <textarea class="goal-input" placeholder="Goal" id="progress" oninput="saveProgress()"></textarea>
+      <textarea class="notes-input" placeholder="Other Notes" id="progress" oninput="saveProgress()"></textarea>
       <input type="checkbox" class="block-checkbox" id="checkbox10">
       <label for="checkbox10"></label>
   </div><hr><br>
@@ -584,9 +619,9 @@ h2 {
     <input type="text" class="time-input" value="3:10 AM - 3:35 AM" 
 >
       <textarea class="activity-input" placeholder="Priority/Side
-"></textarea>
-      <textarea class="goal-input" placeholder="Goal"></textarea>
-      <textarea class="notes-input" placeholder="Other Notes"></textarea>
+" id="progress" oninput="saveProgress()"></textarea>
+      <textarea class="goal-input" placeholder="Goal" id="progress" oninput="saveProgress()"></textarea>
+      <textarea class="notes-input" placeholder="Other Notes" id="progress" oninput="saveProgress()"></textarea>
       <input type="checkbox" class="block-checkbox" id="checkbox11">
       <label for="checkbox11"></label>
   </div><hr><br>
@@ -595,9 +630,9 @@ h2 {
     <input type="text" class="time-input" value="3:40 AM - 4:05 AM" 
 >
       <textarea class="activity-input" placeholder="Priority/Side
-"></textarea>
-      <textarea class="goal-input" placeholder="Goal"></textarea>
-      <textarea class="notes-input" placeholder="Other Notes"></textarea>
+" id="progress" oninput="saveProgress()"></textarea>
+      <textarea class="goal-input" placeholder="Goal" id="progress" oninput="saveProgress()"></textarea>
+      <textarea class="notes-input" placeholder="Other Notes" id="progress" oninput="saveProgress()"></textarea>
       <input type="checkbox" class="block-checkbox" id="checkbox12">
       <label for="checkbox12"></label>
   </div><hr><br>
@@ -607,9 +642,9 @@ h2 {
     <input type="text" class="time-input" value="4:20 AM - 4:45 AM" 
 >
       <textarea class="activity-input" placeholder="Priority/Side
-"></textarea>
-      <textarea class="goal-input" placeholder="Goal"></textarea>
-      <textarea class="notes-input" placeholder="Other Notes"></textarea>
+" id="progress" oninput="saveProgress()"></textarea>
+      <textarea class="goal-input" placeholder="Goal" id="progress" oninput="saveProgress()"></textarea>
+      <textarea class="notes-input" placeholder="Other Notes" id="progress" oninput="saveProgress()"></textarea>
       <input type="checkbox" class="block-checkbox" id="checkbox13">
       <label for="checkbox13"></label>
   </div><hr><br>
@@ -619,9 +654,9 @@ h2 {
     <input type="text" class="time-input" value="4:50 AM - 5:15 AM" 
 >
   <textarea class="activity-input" placeholder="Priority/Side
-"></textarea>
-  <textarea class="goal-input" placeholder="Goal"></textarea>
-  <textarea class="notes-input" placeholder="Other Notes"></textarea>
+" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="goal-input" placeholder="Goal" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="notes-input" placeholder="Other Notes" id="progress" oninput="saveProgress()"></textarea>
   <input type="checkbox" class="block-checkbox" id="checkbox14">
   <label for="checkbox14"></label>
 </div><hr><br>
@@ -630,9 +665,9 @@ h2 {
   <input type="text" class="time-input" value="5:20 AM - 5:45 AM" 
 >
   <textarea class="activity-input" placeholder="Priority/Side
-"></textarea>
-  <textarea class="goal-input" placeholder="Goal"></textarea>
-  <textarea class="notes-input" placeholder="Other Notes"></textarea>
+" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="goal-input" placeholder="Goal" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="notes-input" placeholder="Other Notes" id="progress" oninput="saveProgress()"></textarea>
   <input type="checkbox" class="block-checkbox" id="checkbox15">
   <label for="checkbox15"></label>
 </div><hr><br>
@@ -641,9 +676,9 @@ h2 {
   <input type="text" class="time-input" value="5:50 AM - 6:15 AM" 
 >
   <textarea class="activity-input" placeholder="Priority/Side
-"></textarea>
-  <textarea class="goal-input" placeholder="Goal"></textarea>
-  <textarea class="notes-input" placeholder="Other Notes"></textarea>
+" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="goal-input" placeholder="Goal" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="notes-input" placeholder="Other Notes" id="progress" oninput="saveProgress()"></textarea>
   <input type="checkbox" class="block-checkbox" id="checkbox16">
   <label for="checkbox16"></label>
 </div><hr><br>
@@ -653,9 +688,9 @@ h2 {
   <input type="text" class="time-input" value="6:30 AM - 6:55 AM" 
 >
   <textarea class="activity-input" placeholder="Priority/Side
-"></textarea>
-  <textarea class="goal-input" placeholder="Goal"></textarea>
-  <textarea class="notes-input" placeholder="Other Notes"></textarea>
+" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="goal-input" placeholder="Goal" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="notes-input" placeholder="Other Notes" id="progress" oninput="saveProgress()"></textarea>
   <input type="checkbox" class="block-checkbox" id="checkbox17">
   <label for="checkbox17"></label>
 </div><hr><br>
@@ -664,9 +699,9 @@ h2 {
   <input type="text" class="time-input" value="7:00 AM - 7:25 AM" 
 >
   <textarea class="activity-input" placeholder="Priority/Side
-"></textarea>
-  <textarea class="goal-input" placeholder="Goal"></textarea>
-  <textarea class="notes-input" placeholder="Other Notes"></textarea>
+" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="goal-input" placeholder="Goal" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="notes-input" placeholder="Other Notes" id="progress" oninput="saveProgress()"></textarea>
   <input type="checkbox" class="block-checkbox" id="checkbox18">
   <label for="checkbox18"></label>
 </div><hr><br>
@@ -676,9 +711,9 @@ h2 {
   <input type="text" class="time-input" value="7:30 AM - 7:55 AM" 
 >
   <textarea class="activity-input" placeholder="Priority/Side
-"></textarea>
-  <textarea class="goal-input" placeholder="Goal"></textarea>
-  <textarea class="notes-input" placeholder="Other Notes"></textarea>
+" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="goal-input" placeholder="Goal" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="notes-input" placeholder="Other Notes" id="progress" oninput="saveProgress()"></textarea>
   <input type="checkbox" class="block-checkbox" id="checkbox19">
   <label for="checkbox19"></label>
 </div><hr><br>
@@ -687,9 +722,9 @@ h2 {
   <input type="text" class="time-input" value="8:00 AM - 8:25 AM" 
 >
   <textarea class="activity-input" placeholder="Priority/Side
-"></textarea>
-  <textarea class="goal-input" placeholder="Goal"></textarea>
-  <textarea class="notes-input" placeholder="Other Notes"></textarea>
+" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="goal-input" placeholder="Goal" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="notes-input" placeholder="Other Notes" id="progress" oninput="saveProgress()"></textarea>
   <input type="checkbox" class="block-checkbox" id="checkbox20">
   <label for="checkbox20"></label>
 </div><hr><br>
@@ -699,9 +734,9 @@ h2 {
   <input type="text" class="time-input" value="8:40 AM - 9:05 AM" 
 >
   <textarea class="activity-input" placeholder="Priority/Side
-"></textarea>
-  <textarea class="goal-input" placeholder="Goal"></textarea>
-  <textarea class="notes-input" placeholder="Other Notes"></textarea>
+" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="goal-input" placeholder="Goal" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="notes-input" placeholder="Other Notes" id="progress" oninput="saveProgress()"></textarea>
   <input type="checkbox" class="block-checkbox" id="checkbox21">
   <label for="checkbox21"></label>
 </div><hr><br>
@@ -710,9 +745,9 @@ h2 {
   <input type="text" class="time-input" value="9:10 AM - 9:35 AM" 
 >
   <textarea class="activity-input" placeholder="Priority/Side
-"></textarea>
-  <textarea class="goal-input" placeholder="Goal"></textarea>
-  <textarea class="notes-input" placeholder="Other Notes"></textarea>
+" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="goal-input" placeholder="Goal" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="notes-input" placeholder="Other Notes" id="progress" oninput="saveProgress()"></textarea>
   <input type="checkbox" class="block-checkbox" id="checkbox22">
   <label for="checkbox22"></label>
 </div><hr><br>
@@ -721,9 +756,9 @@ h2 {
   <input type="text" class="time-input" value="9:40 AM - 10:05 AM" 
 >
   <textarea class="activity-input" placeholder="Priority/Side
-"></textarea>
-  <textarea class="goal-input" placeholder="Goal"></textarea>
-  <textarea class="notes-input" placeholder="Other Notes"></textarea>
+" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="goal-input" placeholder="Goal" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="notes-input" placeholder="Other Notes" id="progress" oninput="saveProgress()"></textarea>
   <input type="checkbox" class="block-checkbox" id="checkbox23">
   <label for="checkbox23"></label>
 </div><hr><br>
@@ -732,9 +767,9 @@ h2 {
   <input type="text" class="time-input" value="10:10 AM - 10:35 AM" 
 >
   <textarea class="activity-input" placeholder="Priority/Side
-"></textarea>
-  <textarea class="goal-input" placeholder="Goal"></textarea>
-  <textarea class="notes-input" placeholder="Other Notes"></textarea>
+" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="goal-input" placeholder="Goal" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="notes-input" placeholder="Other Notes" id="progress" oninput="saveProgress()"></textarea>
   <input type="checkbox" class="block-checkbox" id="checkbox24">
   <label for="checkbox24"></label>
 </div><hr><br>
@@ -744,9 +779,9 @@ h2 {
   <input type="text" class="time-input" value="10:50 AM - 11:15 AM" 
 >
   <textarea class="activity-input" placeholder="Priority/Side
-"></textarea>
-  <textarea class="goal-input" placeholder="Goal"></textarea>
-  <textarea class="notes-input" placeholder="Other Notes"></textarea>
+" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="goal-input" placeholder="Goal" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="notes-input" placeholder="Other Notes" id="progress" oninput="saveProgress()"></textarea>
   <input type="checkbox" class="block-checkbox" id="checkbox25">
   <label for="checkbox25"></label>
 </div><hr><br>
@@ -755,9 +790,9 @@ h2 {
   <input type="text" class="time-input" value="11:20 AM - 11:45 AM" 
 >
   <textarea class="activity-input" placeholder="Priority/Side
-"></textarea>
-  <textarea class="goal-input" placeholder="Goal"></textarea>
-  <textarea class="notes-input" placeholder="Other Notes"></textarea>
+" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="goal-input" placeholder="Goal" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="notes-input" placeholder="Other Notes" id="progress" oninput="saveProgress()"></textarea>
   <input type="checkbox" class="block-checkbox" id="checkbox26">
   <label for="checkbox26"></label>
 </div><hr><br>
@@ -766,9 +801,9 @@ h2 {
   <input type="text" class="time-input" value="11:50 AM - 12:15 PM" 
 >
   <textarea class="activity-input" placeholder="Priority/Side
-"></textarea>
-  <textarea class="goal-input" placeholder="Goal"></textarea>
-  <textarea class="notes-input" placeholder="Other Notes"></textarea>
+" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="goal-input" placeholder="Goal" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="notes-input" placeholder="Other Notes" id="progress" oninput="saveProgress()"></textarea>
   <input type="checkbox" class="block-checkbox" id="checkbox26">
   <label for="checkbox26"></label>
 </div><hr><br>
@@ -784,9 +819,9 @@ h2 {
               <input type="text" class="time-input" value="12:20 PM - 12:45 PM" 
 >
               <textarea class="activity-input" placeholder="Priority/Side
-"></textarea>
-              <textarea class="goal-input" placeholder="Goal"></textarea>
-              <textarea class="notes-input" placeholder="Other Notes"></textarea>
+" id="progress" oninput="saveProgress()"></textarea>
+              <textarea class="goal-input" placeholder="Goal" id="progress" oninput="saveProgress()"></textarea>
+              <textarea class="notes-input" placeholder="Other Notes" id="progress" oninput="saveProgress()"></textarea>
               <input type="checkbox" class="block-checkbox" id="checkbox26">
               <label for="checkbox26"></label>
             </div><hr><br>
@@ -795,9 +830,9 @@ h2 {
   <input type="text" class="time-input" value="1:00 PM - 1:25 PM" 
 >
   <textarea class="activity-input" placeholder="Priority/Side
-"></textarea>
-  <textarea class="goal-input" placeholder="Goal"></textarea>
-  <textarea class="notes-input" placeholder="Other Notes"></textarea>
+" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="goal-input" placeholder="Goal" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="notes-input" placeholder="Other Notes" id="progress" oninput="saveProgress()"></textarea>
   <input type="checkbox" class="block-checkbox" id="checkbox28">
   <label for="checkbox28"></label>
 </div><hr><br>
@@ -807,9 +842,9 @@ h2 {
   <input type="text" class="time-input" value="1:30 PM - 1:55 PM" 
 >
   <textarea class="activity-input" placeholder="Priority/Side
-"></textarea>
-  <textarea class="goal-input" placeholder="Goal"></textarea>
-  <textarea class="notes-input" placeholder="Other Notes"></textarea>
+" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="goal-input" placeholder="Goal" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="notes-input" placeholder="Other Notes" id="progress" oninput="saveProgress()"></textarea>
   <input type="checkbox" class="block-checkbox" id="checkbox29">
   <label for="checkbox29"></label>
 </div><hr><br>
@@ -818,9 +853,9 @@ h2 {
   <input type="text" class="time-input" value="2:00 PM - 2:25 PM" 
 >
   <textarea class="activity-input" placeholder="Priority/Side
-"></textarea>
-  <textarea class="goal-input" placeholder="Goal"></textarea>
-  <textarea class="notes-input" placeholder="Other Notes"></textarea>
+" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="goal-input" placeholder="Goal" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="notes-input" placeholder="Other Notes" id="progress" oninput="saveProgress()"></textarea>
   <input type="checkbox" class="block-checkbox" id="checkbox30">
   <label for="checkbox30"></label>
 </div><hr><br>
@@ -835,9 +870,9 @@ h2 {
   <input type="text" class="time-input" value="2:30 PM - 2:55 PM" 
 >
   <textarea class="activity-input" placeholder="Priority/Side
-"></textarea>
-  <textarea class="goal-input" placeholder="Goal"></textarea>
-  <textarea class="notes-input" placeholder="Other Notes"></textarea>
+" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="goal-input" placeholder="Goal" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="notes-input" placeholder="Other Notes" id="progress" oninput="saveProgress()"></textarea>
   <input type="checkbox" class="block-checkbox" id="checkbox31">
   <label for="checkbox31"></label>
 </div><hr><br>
@@ -846,9 +881,9 @@ h2 {
   <input type="text" class="time-input" value="3:10 PM - 3:35 PM" 
 >
   <textarea class="activity-input" placeholder="Priority/Side
-"></textarea>
-  <textarea class="goal-input" placeholder="Goal"></textarea>
-  <textarea class="notes-input" placeholder="Other Notes"></textarea>
+" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="goal-input" placeholder="Goal" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="notes-input" placeholder="Other Notes" id="progress" oninput="saveProgress()"></textarea>
   <input type="checkbox" class="block-checkbox" id="checkbox32">
   <label for="checkbox32"></label>
 </div><hr><br>
@@ -857,9 +892,9 @@ h2 {
   <input type="text" class="time-input" value="3:40 PM - 4:05 PM" 
 >
   <textarea class="activity-input" placeholder="Priority/Side
-"></textarea>
-  <textarea class="goal-input" placeholder="Goal"></textarea>
-  <textarea class="notes-input" placeholder="Other Notes"></textarea>
+" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="goal-input" placeholder="Goal" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="notes-input" placeholder="Other Notes" id="progress" oninput="saveProgress()"></textarea>
   <input type="checkbox" class="block-checkbox" id="checkbox33">
   <label for="checkbox33"></label>
 </div><hr><br>
@@ -869,9 +904,9 @@ h2 {
   <input type="text" class="time-input" value="4:10 PM - 4:35 PM" 
 >
   <textarea class="activity-input" placeholder="Priority/Side
-"></textarea>
-  <textarea class="goal-input" placeholder="Goal"></textarea>
-  <textarea class="notes-input" placeholder="Other Notes"></textarea>
+" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="goal-input" placeholder="Goal" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="notes-input" placeholder="Other Notes" id="progress" oninput="saveProgress()"></textarea>
   <input type="checkbox" class="block-checkbox" id="checkbox34">
   <label for="checkbox34"></label>
 </div><hr><br>
@@ -880,9 +915,9 @@ h2 {
   <input type="text" class="time-input" value="4:40 PM - 5:05 PM" 
 >
   <textarea class="activity-input" placeholder="Priority/Side
-"></textarea>
-  <textarea class="goal-input" placeholder="Goal"></textarea>
-  <textarea class="notes-input" placeholder="Other Notes"></textarea>
+" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="goal-input" placeholder="Goal" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="notes-input" placeholder="Other Notes" id="progress" oninput="saveProgress()"></textarea>
   <input type="checkbox" class="block-checkbox" id="checkbox35">
   <label for="checkbox35"></label>
 </div><hr><br>
@@ -891,9 +926,9 @@ h2 {
   <input type="text" class="time-input" value="5:20 PM - 5:45 PM" 
 >
   <textarea class="activity-input" placeholder="Priority/Side
-"></textarea>
-  <textarea class="goal-input" placeholder="Goal"></textarea>
-  <textarea class="notes-input" placeholder="Other Notes"></textarea>
+" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="goal-input" placeholder="Goal" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="notes-input" placeholder="Other Notes" id="progress" oninput="saveProgress()"></textarea>
   <input type="checkbox" class="block-checkbox" id="checkbox36">
   <label for="checkbox36"></label>
 </div><hr><br>
@@ -902,9 +937,9 @@ h2 {
   <input type="text" class="time-input" value="5:50 PM - 6:15 PM" 
 >
   <textarea class="activity-input" placeholder="Priority/Side
-"></textarea>
-  <textarea class="goal-input" placeholder="Goal"></textarea>
-  <textarea class="notes-input" placeholder="Other Notes"></textarea>
+" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="goal-input" placeholder="Goal" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="notes-input" placeholder="Other Notes" id="progress" oninput="saveProgress()"></textarea>
   <input type="checkbox" class="block-checkbox" id="checkbox37">
   <label for="checkbox37"></label>
 </div><hr><br>
@@ -914,9 +949,9 @@ h2 {
   <input type="text" class="time-input" value="6:20 PM - 6:45 PM" 
 >
   <textarea class="activity-input" placeholder="Priority/Side
-"></textarea>
-  <textarea class="goal-input" placeholder="Goal"></textarea>
-  <textarea class="notes-input" placeholder="Other Notes"></textarea>
+" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="goal-input" placeholder="Goal" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="notes-input" placeholder="Other Notes" id="progress" oninput="saveProgress()"></textarea>
   <input type="checkbox" class="block-checkbox" id="checkbox38">
   <label for="checkbox38"></label>
 </div><hr><br>
@@ -925,9 +960,9 @@ h2 {
   <input type="text" class="time-input" value="6:50 PM - 7:15 PM" 
 >
   <textarea class="activity-input" placeholder="Priority/Side
-"></textarea>
-  <textarea class="goal-input" placeholder="Goal"></textarea>
-  <textarea class="notes-input" placeholder="Other Notes"></textarea>
+" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="goal-input" placeholder="Goal" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="notes-input" placeholder="Other Notes" id="progress" oninput="saveProgress()"></textarea>
   <input type="checkbox" class="block-checkbox" id="checkbox39">
   <label for="checkbox39"></label>
 </div><hr><br>
@@ -936,9 +971,9 @@ h2 {
   <input type="text" class="time-input" value="7:30 PM - 7:55 PM" 
 >
   <textarea class="activity-input" placeholder="Priority/Side
-"></textarea>
-  <textarea class="goal-input" placeholder="Goal"></textarea>
-  <textarea class="notes-input" placeholder="Other Notes"></textarea>
+" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="goal-input" placeholder="Goal" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="notes-input" placeholder="Other Notes" id="progress" oninput="saveProgress()"></textarea>
   <input type="checkbox" class="block-checkbox" id="checkbox40">
   <label for="checkbox40"></label>
 </div><hr><br>
@@ -947,9 +982,9 @@ h2 {
   <input type="text" class="time-input" value="8:00 PM - 8:25 PM" 
 >
   <textarea class="activity-input" placeholder="Priority/Side
-"></textarea>
-  <textarea class="goal-input" placeholder="Goal"></textarea>
-  <textarea class="notes-input" placeholder="Other Notes"></textarea>
+" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="goal-input" placeholder="Goal" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="notes-input" placeholder="Other Notes" id="progress" oninput="saveProgress()"></textarea>
   <input type="checkbox" class="block-checkbox" id="checkbox41">
   <label for="checkbox41"></label>
 </div><hr><br>
@@ -959,9 +994,9 @@ h2 {
   <input type="text" class="time-input" value="8:30 PM - 8:55 PM" 
 >
   <textarea class="activity-input" placeholder="Priority/Side
-"></textarea>
-  <textarea class="goal-input" placeholder="Goal"></textarea>
-  <textarea class="notes-input" placeholder="Other Notes"></textarea>
+" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="goal-input" placeholder="Goal" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="notes-input" placeholder="Other Notes" id="progress" oninput="saveProgress()"></textarea>
   <input type="checkbox" class="block-checkbox" id="checkbox42">
   <label for="checkbox42"></label>
 </div><hr><br>
@@ -973,9 +1008,9 @@ h2 {
   <input type="text" class="time-input" value="9:00 PM - 9:25 PM" 
 >
   <textarea class="activity-input" placeholder="Priority/Side
-"></textarea>
-  <textarea class="goal-input" placeholder="Goal"></textarea>
-  <textarea class="notes-input" placeholder="Other Notes"></textarea>
+" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="goal-input" placeholder="Goal" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="notes-input" placeholder="Other Notes" id="progress" oninput="saveProgress()"></textarea>
   <input type="checkbox" class="block-checkbox" id="checkbox43">
   <label for="checkbox43"></label>
 </div><hr><br>
@@ -984,9 +1019,9 @@ h2 {
   <input type="text" class="time-input" value="9:40 PM - 10:05 PM" 
 >
   <textarea class="activity-input" placeholder="Priority/Side
-"></textarea>
-  <textarea class="goal-input" placeholder="Goal"></textarea>
-  <textarea class="notes-input" placeholder="Other Notes"></textarea>
+" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="goal-input" placeholder="Goal" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="notes-input" placeholder="Other Notes" id="progress" oninput="saveProgress()"></textarea>
   <input type="checkbox" class="block-checkbox" id="checkbox44">
   <label for="checkbox44"></label>
 </div><hr><br>
@@ -995,9 +1030,9 @@ h2 {
   <input type="text" class="time-input" value="10:10 PM - 10:35 PM" 
 >
   <textarea class="activity-input" placeholder="Priority/Side
-"></textarea>
-  <textarea class="goal-input" placeholder="Goal"></textarea>
-  <textarea class="notes-input" placeholder="Other Notes"></textarea>
+" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="goal-input" placeholder="Goal" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="notes-input" placeholder="Other Notes" id="progress" oninput="saveProgress()"></textarea>
   <input type="checkbox" class="block-checkbox" id="checkbox45">
   <label for="checkbox45"></label>
 </div><hr><br>
@@ -1007,9 +1042,9 @@ h2 {
   <input type="text" class="time-input" value="10:40 PM - 11:05 PM" 
 >
   <textarea class="activity-input" placeholder="Priority/Side
-"></textarea>
-  <textarea class="goal-input" placeholder="Goal"></textarea>
-  <textarea class="notes-input" placeholder="Other Notes"></textarea>
+" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="goal-input" placeholder="Goal" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="notes-input" placeholder="Other Notes" id="progress" oninput="saveProgress()"></textarea>
   <input type="checkbox" class="block-checkbox" id="checkbox46">
   <label for="checkbox46"></label>
 </div><hr><br>
@@ -1018,9 +1053,9 @@ h2 {
   <input type="text" class="time-input" value="11:10 PM - 11:35 PM" 
 >
   <textarea class="activity-input" placeholder="Priority/Side
-"></textarea>
-  <textarea class="goal-input" placeholder="Goal"></textarea>
-  <textarea class="notes-input" placeholder="Other Notes"></textarea>
+" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="goal-input" placeholder="Goal" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="notes-input" placeholder="Other Notes" id="progress" oninput="saveProgress()"></textarea>
   <input type="checkbox" class="block-checkbox" id="checkbox47">
   <label for="checkbox47"></label>
 </div><hr><br>
@@ -1028,9 +1063,9 @@ h2 {
   <input type="text" class="time-input" value="11:40 PM - 12:00 AM" 
 >
   <textarea class="activity-input" placeholder="Priority/Side
-"></textarea>
-  <textarea class="goal-input" placeholder="Goal"></textarea>
-  <textarea class="notes-input" placeholder="Other Notes"></textarea>
+" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="goal-input" placeholder="Goal" id="progress" oninput="saveProgress()"></textarea>
+  <textarea class="notes-input" placeholder="Other Notes" id="progress" oninput="saveProgress()"></textarea>
   <input type="checkbox" class="block-checkbox" id="checkbox47">
   <label for="checkbox47"></label>
 </div><hr><br>
@@ -1045,6 +1080,7 @@ h2 {
    </div>
    <script>
     // Add an event listener for the 'beforeunload' event
+   
     window.addEventListener('beforeunload', function (event) {
         // Prompt the user to confirm closing the page
         var confirmationMessage = 'Type "I want to close out" to confirm closing the page.';
